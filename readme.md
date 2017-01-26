@@ -1,8 +1,7 @@
-# MERN Stack Template
+# React-Bootstrap-Demo
 
 Includes:
 
-* MongoDB / Mongoose
 * Express
 * React
 * Webpack
