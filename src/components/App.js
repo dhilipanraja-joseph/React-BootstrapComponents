@@ -6,10 +6,10 @@ export default class App extends Component {
     return (
       <div>
         <NavigationBar/>
-        <div className="container">
+        <div>
           {this.props.children}
         </div>
       </div>
-    )
+    );
   }
 }

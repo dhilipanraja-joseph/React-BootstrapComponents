@@ -9,18 +9,19 @@ const headerStyle = {
 
 const NavStyle = {
   borderRadius: "0",
-  // height: "70px"
+  fontFamily: "BreeSerif",
 };
 
 const itemStyle = {
   fontSize: "15px",
 };
+
 export default class NavigationBar extends Component {
   constructor() {
     super();
   }
   navigate(to) {
-    browserHistory.push(`/${to}`);
+    browserHistory.push(to);
   }
   render() {
     return (
@@ -34,14 +35,30 @@ export default class NavigationBar extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <NavItem style={itemStyle} onClick={this.navigate.bind(this,'WhatWeDo')} eventKey={1}>What We Do</NavItem>
-              <NavItem style={itemStyle} onClick={this.navigate.bind(this,'WhoAreWe')} eventKey={2}>Who Are We</NavItem>
-              <NavItem style={itemStyle} onClick={this.navigate.bind(this,'WhyUs')} eventKey={3}>Why Us</NavItem>
-              <NavItem style={itemStyle} onClick={this.navigate.bind(this,'WorkWithUs')} eventKey={4}>Work With Us</NavItem>
+              <NavItem
+                style={itemStyle}
+                onClick={this.navigate.bind(this,'/WhatWeDo')}
+                eventKey={1}>What We Do
+              </NavItem>
+              <NavItem
+                style={itemStyle}
+                onClick={this.navigate.bind(this,'/WhoAreWe')}
+                eventKey={2}>Who Are We
+              </NavItem>
+              <NavItem
+                style={itemStyle}
+                onClick={this.navigate.bind(this,'/WhyUs')}
+                eventKey={3}>Why Us
+              </NavItem>
+              <NavItem
+                style={itemStyle}
+                onClick={this.navigate.bind(this,'/WorkWithUs')}
+                eventKey={4}>Work With Us
+              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>
-    )
+    );
   }
 }
