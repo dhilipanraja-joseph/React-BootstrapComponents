@@ -4,7 +4,7 @@ export default class Contribute extends Component {
   render() {
     return (
       <div>
-        Contribute
+        ContributeWorks
       </div>
     );
   }
