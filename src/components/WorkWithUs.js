@@ -20,7 +20,7 @@ export default class WorkWithUs extends Component {
   _onClick(c) {
     this.setState({
       render: c,
-      close: <div onClick={this._close}>X</div>
+      close: <div onClick={this._close}>Close (X)</div>
     });
   }
   render() {
@@ -36,8 +36,8 @@ export default class WorkWithUs extends Component {
             Contribute to our WebApp
           </span>
         </h3>
-        {close}
-        {render}
+         {close}
+         {render}
         <div> This is the bottom </div>
       </div>
     );
