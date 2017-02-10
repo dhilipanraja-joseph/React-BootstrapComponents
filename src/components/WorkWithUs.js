@@ -26,7 +26,7 @@ export default class WorkWithUs extends Component {
   render() {
     let { render,close } = this.state;
     return (
-      <div className="text-center">
+      <div className="text-center container">
         <h3>
           <span onClick={this._onClick.bind(this,<AskUs/>)}>
             Ask Us to build a WebApp
@@ -38,7 +38,6 @@ export default class WorkWithUs extends Component {
         </h3>
          {close}
          {render}
-        <div> This is the bottom </div>
       </div>
     );
   }
