@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AskUs from './AskUs';
 import Contribute from './Contribute';
+import jq from 'jquery';
 
 export default class WorkWithUs extends Component {
   constructor() {
@@ -10,6 +11,9 @@ export default class WorkWithUs extends Component {
       close: <div/>
     };
     this._close=this._close.bind(this);
+  }
+  componentDidMount() {
+    jq('#navBar').addClass('navResize').removeClass('navSize');
   }
   _close(){
     this.setState({
@@ -26,7 +30,7 @@ export default class WorkWithUs extends Component {
   render() {
     let { render,close } = this.state;
     return (
-      <div className="text-center">
+      <div className="text-center container">
         <h3>
           <span onClick={this._onClick.bind(this,<AskUs/>)}>
             Ask Us to build a WebApp
@@ -38,7 +42,6 @@ export default class WorkWithUs extends Component {
         </h3>
          {close}
          {render}
-        <div> This is the bottom </div>
       </div>
     );
   }

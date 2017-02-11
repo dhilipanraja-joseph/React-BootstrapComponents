@@ -3,30 +3,37 @@ import { Link, browserHistory } from 'react-router';
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 const headerStyle = {
-  color: "white",
-  fontSize: "25px",
+  fontSize: "30px",
 };
 
 const NavStyle = {
+  backgroundColor: "rgba(255, 255, 255, 0.9)",
+  padding: "30px",
   borderRadius: "0",
+  border: "0px solid white",
   fontFamily: "BreeSerif",
 };
+
+const navSize = {
+  backgroundColor: "rgba(255, 255, 255,1)",
+  padding: "10px",
+  borderRadius: "0",
+  border: "0px solid white",
+  fontFamily: "BreeSerif",
+}
 
 const itemStyle = {
   fontSize: "15px",
 };
 
 export default class NavigationBar extends Component {
-  constructor() {
-    super();
-  }
   navigate(to) {
     browserHistory.push(to);
   }
   render() {
     return (
       <div>
-        <Navbar style={NavStyle} inverse collapseOnSelect>
+        <Navbar id="navBar" fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
               <Link style={headerStyle} to="/">Website4U</Link>
@@ -42,8 +49,8 @@ export default class NavigationBar extends Component {
               </NavItem>
               <NavItem
                 style={itemStyle}
-                onClick={this.navigate.bind(this,'/WhoAreWe')}
-                eventKey={2}>Who Are We
+                onClick={this.navigate.bind(this,'/WhoWeAre')}
+                eventKey={2}>Who We Are
               </NavItem>
               <NavItem
                 style={itemStyle}
