@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AskUs from './AskUs';
 import Contribute from './Contribute';
+import jq from 'jquery';
 
 export default class WorkWithUs extends Component {
   constructor() {
@@ -10,6 +11,9 @@ export default class WorkWithUs extends Component {
       close: <div/>
     };
     this._close=this._close.bind(this);
+  }
+  componentDidMount() {
+    jq('#navBar').addClass('navResize').removeClass('navSize');
   }
   _close(){
     this.setState({

@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import PercentageBars from './PercentageBars'
+import PercentageBars from './PercentageBars';
+import jq from 'jquery';
 
 const splahBox = {
+  color: "white",
   padding: "20px",
+  paddingTop: "30vh",
   textAlign: "center",
   backgroundColor: "white",
-  marginTop: "-20px",
-  backgroundImage: "url('') no-repeat center center fixed",
+  marginTop: "-40px",
+  background: "url('sm1.jpg') no-repeat center",
   backgroundSize: "cover",
-  height: "60vh",
+  height: "80vh",
 };
 const textJus= {
   textAlign: "justify",
@@ -18,34 +21,48 @@ const barOne = {
   title: "Less to No online presence (% of Small Businesses)",
   bgColor: "#ffd4d1",
   barColor: "#ff6c6c",
-  percentage: "64%",
-  thickness: "10px",
-  border: "1px solid white"
-};
-
-const barTwo = {
-  title: "Percentage Of Small Businesses with proper online presence (includes Responsiveness, Mobile-Friendly, Easy-to-use and Interactive)",
-  bgColor: "#aff6ff",
-  barColor: "#00bcd4",
   percentage: "46%",
   thickness: "10px",
   border: "1px solid white"
 };
 
-export default class SplashPage extends Component {
+const barTwo = {
+  title: "Percentage Of Small Businesses with proper online presence (includes Responsiveness, Mobile-Friendly, Easy-to-use and Interactive Websites)",
+  bgColor: "#aff6ff",
+  barColor: "#00bcd4",
+  percentage: "54%",
+  thickness: "10px",
+  border: "1px solid white"
+};
 
+export default class SplashPage extends Component {
+  _handleScroll(e) {
+    let scrollTop = e.srcElement.body.scrollTop;
+    if(scrollTop > 70) {
+      jq('#navBar').addClass('navResize').removeClass('navSize');
+    } else {
+      jq('#navBar').addClass('navSize').removeClass('navResize');
+    }
+    // console.log("Scrolling!:", scrollTop);
+  }
+  componentDidMount() {
+    jq('#navBar').addClass('navSize').removeClass('navResize');
+    window.addEventListener('scroll',this._handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll',this._handleScroll);
+    jq('#navBar').addClass('navResize').removeClass('navSize');
+  }
   render() {
     return (
       <div>
         <div style={splahBox}>
           <div className="container">
-
-            <h1>Website4U</h1>
-            <p> Website4U helps you to excel in your buisness through enhancing your online presence by creating responsive web applications.</p>
-            <p>
+            <h1> Website4U helps you to excel in your buisness through enhancing your online presence by creating responsive web applications.</h1>
+            {/* <p>
               According to Clutch—a Washington, D.C.-based market research firm—surveyed 350 small business owners and managers operating in the U.S. (most with 1 – 10 employees and less than $1 million in yearly revenue). The survey results show that 46 percent do not have a small business website to call their own.
               Among the 54 percent of small businesses that do have a website, 68 percent said it was mobile-friendly. Twenty-three percent of respondents reported that they didn't have a mobile-enabled site, and another 9 percent said they weren't sure if their sites worked well on smartphones and tablets.
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="container">

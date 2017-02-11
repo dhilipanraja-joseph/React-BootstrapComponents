@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import NavigationBar from './NavigationBar'
 
 const container = {
-  // backgroundColor: "white",
   fontSize: "16px",
+  marginTop: "40px",
 };
 
 const footerStyle = {
+  height: "200px",
   marginTop: "40px",
   padding: "5px",
-  backgroundColor: "#e8e8e8",
-  borderTop: "1.5px solid #d0d0d0",
+  backgroundColor: "#314146",
+  borderTop: "3px solid #3babe4",
   textAlign: "center",
-  color: "grey",
+  color: "white",
 };
 
 export default class App extends Component {
@@ -23,7 +24,9 @@ export default class App extends Component {
         <div style={container}>
           {this.props.children}
         </div>
-        <div style={footerStyle}>Footer</div>
+        <div style={footerStyle}>
+          Footer
+        </div>
       </div>
     );
   }

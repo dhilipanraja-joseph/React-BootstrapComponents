@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import jq from 'jquery';
 
 const wBox = {
   textAlign: "center",
 };
 
 export default class WhatWeDo extends Component {
+  componentDidMount() {
+    jq('#navBar').addClass('navResize').removeClass('navSize');
+  }
   render() {
     return (
       <div className="container" style={wBox}>

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import jq from 'jquery';
 
 export default class WhoWeAre extends Component {
+  componentDidMount() {
+    jq('#navBar').addClass('navResize').removeClass('navSize');
+  }
   render() {
     return (
       <div className="container">

@@ -35,6 +35,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(express.static(__dirname + '/public'));
 
 // ROUTES
 app.use('/api', require('./routes/api'));
