@@ -18,7 +18,8 @@ export default class SplashPage extends Component {
           <p>
             According to Clutch—a Washington, D.C.-based market research firm—surveyed 350 small business owners and managers operating in the U.S. (most with 1 – 10 employees and less than $1 million in yearly revenue). The survey results show that 46 percent do not have a small business website to call their own.
             Among the 54 percent of small businesses that do have a website, 68 percent said it was mobile-friendly. Twenty-three percent of respondents reported that they didn't have a mobile-enabled site, and another 9 percent said they weren't sure if their sites worked well on smartphones and tablets.
-          </p></div><div style={text}>
+          </p></div>
+          <div style={text}>
         According to this survey,
          Think about What Customers want from you ??
          From Online Review Survey Research
