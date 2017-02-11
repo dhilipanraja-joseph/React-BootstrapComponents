@@ -4,14 +4,13 @@ import jq from 'jquery';
 
 const splahBox = {
   color: "white",
-  padding: "20px",
-  paddingTop: "30vh",
+  paddingTop: "22vw",
   textAlign: "center",
   backgroundColor: "white",
   marginTop: "-40px",
   background: "url('sm1.jpg') no-repeat center",
   backgroundSize: "cover",
-  height: "80vh",
+  height: "85vh",
 };
 const textJus= {
   textAlign: "justify",
@@ -21,13 +20,13 @@ const barOne = {
   title: "Less to No online presence (% of Small Businesses)",
   bgColor: "#ffd4d1",
   barColor: "#ff6c6c",
-  percentage: "46%",
+  percentage: "64%",
   thickness: "10px",
   border: "1px solid white"
 };
 
 const barTwo = {
-  title: "Percentage Of Small Businesses with proper online presence (includes Responsiveness, Mobile-Friendly, Easy-to-use and Interactive Websites)",
+  title: "Proper online presence (% of Small Businesses)",
   bgColor: "#aff6ff",
   barColor: "#00bcd4",
   percentage: "54%",
@@ -66,8 +65,14 @@ export default class SplashPage extends Component {
           </div>
         </div>
         <div className="container">
-          <PercentageBars display={barOne} />
-          <PercentageBars display={barTwo} />
+          <div className="row">
+            <div className="col-md-6">
+              <PercentageBars display={barTwo} />
+            </div>
+            <div className="col-md-6">
+              <PercentageBars display={barOne} />
+            </div>
+          </div>
           <div style={textJus}>
             <p>According to this survey, Think about What Customers want from you ??. From Online Review Survey Research</p>
             <ul>
