@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import jq from 'jquery';
 
 const headerStyle = {
   fontSize: "30px",
@@ -27,6 +28,21 @@ const itemStyle = {
 };
 
 export default class NavigationBar extends Component {
+  _handleScroll(e) {
+    let scrollTop = e.srcElement.body.scrollTop;
+    if(scrollTop > 70) {
+      jq('#navBar').addClass('navResize').removeClass('navSize');
+    } else {
+      jq('#navBar').addClass('navSize').removeClass('navResize');
+    }
+  }
+  componentDidMount() {
+    jq('#navBar').addClass('navSize').removeClass('navResize');
+    window.addEventListener('scroll',this._handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll',this._handleScroll);
+  }
   navigate(to) {
     browserHistory.push(to);
   }

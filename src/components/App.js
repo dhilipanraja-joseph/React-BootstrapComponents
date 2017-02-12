@@ -3,7 +3,7 @@ import NavigationBar from './NavigationBar'
 
 const container = {
   fontSize: "16px",
-  marginTop: "40px",
+  marginTop: "100px",
 };
 
 const footerStyle = {

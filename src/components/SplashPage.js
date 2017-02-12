@@ -8,7 +8,7 @@ const splahBox = {
   paddingTop: "22vw",
   textAlign: "center",
   backgroundColor: "white",
-  marginTop: "-40px",
+  marginTop: "-50px",
   background: "url('sm1.jpg') no-repeat center",
   backgroundSize: "cover",
   height: "85vh",
@@ -33,22 +33,10 @@ const barTwo = {
 };
 
 export default class SplashPage extends Component {
-  _handleScroll(e) {
-    let scrollTop = e.srcElement.body.scrollTop;
-    if(scrollTop > 70) {
-      jq('#navBar').addClass('navResize').removeClass('navSize');
-    } else {
-      jq('#navBar').addClass('navSize').removeClass('navResize');
-    }
-  }
   componentDidMount() {
-    jq('#navBar').addClass('navSize').removeClass('navResize');
-    window.addEventListener('scroll',this._handleScroll);
+    window.scrollTo(0,0);
   }
-  componentWillUnmount() {
-    window.removeEventListener('scroll',this._handleScroll);
-    jq('#navBar').addClass('navResize').removeClass('navSize');
-  }
+  
   render() {
     return (
       <div>
