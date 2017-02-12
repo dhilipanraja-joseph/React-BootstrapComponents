@@ -11,14 +11,14 @@ const valCircle= {
 export default class PercentageCircle extends Component {
   render() {
     return (
-      <div>
+      <div className="row">
         Circle PercentageBars
-        <div style={extCircle} className="progress-circle p50">
-           <span>50%</span>
-           <div className="left-half-clipper">
-              <div className="first50-bar"></div>
-              <div className="value-bar"></div>
-           </div>
+        <div className="c100 p84 green">
+          <span>84%</span>
+          <div className="slice">
+            <div className="bar"></div>
+            <div className="fill"></div>
+          </div>
         </div>
       </div>
     );

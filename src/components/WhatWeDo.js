@@ -14,10 +14,9 @@ const WhatDo = {
     height: "100%",
     zIndex: "-10",
     color: "white",
-    paddingTop: "10px",
     background: "url('sm.jpg') no-repeat center center",
     backgroundSize: "cover",
-    // height: "85vh",
+    height: "85vh",
 };
 
 const textJus = {
@@ -28,7 +27,7 @@ const textJus = {
 const BuildWeb = {
     background: "url('bookshare-main.jpg') no-repeat center",
     backgroundSize: "cover",
-    height: "90vh",
+    height: "80vh",
     color: "white"
 };
 
