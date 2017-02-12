@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PercentageBars from './PercentageBars';
+import PercentageCircle from './PercentageCircle';
 import jq from 'jquery';
 
 const splahBox = {
@@ -11,9 +12,6 @@ const splahBox = {
   background: "url('sm1.jpg') no-repeat center",
   backgroundSize: "cover",
   height: "85vh",
-};
-const textJus= {
-  textAlign: "justify",
 };
 
 const barOne = {
@@ -42,7 +40,6 @@ export default class SplashPage extends Component {
     } else {
       jq('#navBar').addClass('navSize').removeClass('navResize');
     }
-    // console.log("Scrolling!:", scrollTop);
   }
   componentDidMount() {
     jq('#navBar').addClass('navSize').removeClass('navResize');
@@ -67,13 +64,16 @@ export default class SplashPage extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <PercentageBars display={barTwo} />
+              <PercentageBars display={barTwo}/>
             </div>
             <div className="col-md-6">
-              <PercentageBars display={barOne} />
+              <PercentageBars display={barOne}/>
             </div>
           </div>
-          <div style={textJus}>
+          <div style={{textAlign: "center"}}>
+            <PercentageCircle/>
+          </div>
+          <div style={{textAlign: "justify"}}>
             <p>According to this survey, Think about What Customers want from you ??. From Online Review Survey Research</p>
             <ul>
               <li>84% of people trust online reviews as much as a personal recommendation</li>
