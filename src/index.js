@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { SplashPage, App, WhatWeDo, WhoWeAre, WhyUs, WorkWithUs } from './components';
 import './assets/styles/global.css';
+import './assets/styles/circle.css';
 
 render(
   <Router history={browserHistory}>
