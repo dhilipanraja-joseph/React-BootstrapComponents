@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from './NavigationBar'
 
 const container = {
-  fontSize: "16px",
+  fontSize: "17px",
   marginTop: "100px",
 };
 
