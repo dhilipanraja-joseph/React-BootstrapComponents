@@ -22,12 +22,10 @@ const BuildWeb={
 };
 const imgPad={
   marginTop :"60px",
-  textAlign: "center",
-
 };
-const imgStyle ={
+const imgBorder ={
   border :"2px solid black",
-
+  margin: "auto",
 };
 
 export default class WhatWeDo extends Component {
@@ -44,8 +42,8 @@ export default class WhatWeDo extends Component {
           We will provide you the sample snapshots of how your website looks and upon your confirmation and verification,we will build you the website you are really exicted to see meeting all your requirements.
          You are free to select the style,colour and the fonts of your needs and we do consider all your requirements including secure online payments,database management but not limited to.Feel free to send all your requirements and we are ready to build a high quality website for you </p> */}
       </div>
-      <div className="container" style={textJus}>
-        <div className="row">
+      <div className="container text-center">
+        <div style={textJus}>
           <p> We build websites for your buisness and design according to your needs.
           We will provide you the sample snapshots of how your website looks and upon your confirmation and verification,we will build you the website you are really exicted to see meeting all your requirements.
          You are free to select the style,colour and the fonts of your needs and we do consider all your requirements including secure online payments,database management but not limited to.Feel free to send all your requirements and we are ready to build a high quality website for you </p>
@@ -53,11 +51,12 @@ export default class WhatWeDo extends Component {
          <div style={BuildWeb}>
           <h1>Build Website </h1>
          </div>
-         <div style={imgPad}>
-           <img style={imgStyle} src="ezgif.com-optimize.gif" ></img>
-         </div>
+       </div>
+       <div style={imgPad}>
+         <img style={imgBorder} src="ezgif.com-optimize.gif" className="img-responsive" ></img>
+       </div>
+      </div>
     </div>
-      </div></div>
     );
   }
 }
