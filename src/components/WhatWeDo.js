@@ -37,6 +37,12 @@ const imgBorder = {
     margin: "auto"
 };
 
+const imgSize = {
+  width: "100px",
+  paddingRight :"10px",
+
+};
+
 export default class WhatWeDo extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -82,6 +88,12 @@ export default class WhatWeDo extends Component {
                         <li>Social media marketing provides companies with a way to reach new customers and engage with existing customers.</li>
                       <li>Social media marketing programs usually center on efforts to create content that attracts attention and encourages readers to share it across their social networks.</li></ul>
                     </div>
+                    <div>
+                      <img style={imgSize} src="fb.png"></img>
+                      <img style={imgSize} src="twit.png"></img>
+                      <img style={imgSize} src="insta.png"></img>
+                      <img style={imgSize} src="glisting.png"></img>
+                  </div>
                 </div>
             </div>
         );
