@@ -58,11 +58,11 @@ export default class SplashPage extends Component {
               <PercentageBars display={barOne}/>
             </div>
           </div>
-          <div style={{textAlign: "center"}}>
+          <div>
             <PercentageCircle/>
           </div>
           <div style={{textAlign: "justify"}}>
-            <p>According to this survey, Think about What Customers want from you ??. From Online Review Survey Research</p>
+            <p>According to this survey, Think about What Customers want from you ?. From Online Review Survey Research</p>
             <ul>
               <li>84% of people trust online reviews as much as a personal recommendation</li>
               <li>7 out of 10 consumers will leave a review for a business if they're asked to</li>
