@@ -8,7 +8,6 @@ const container = {
 
 const footerStyle = {
   height: "200px",
-  marginTop: "40px",
   padding: "5px",
   backgroundColor: "#314146",
   borderTop: "3px solid #3babe4",

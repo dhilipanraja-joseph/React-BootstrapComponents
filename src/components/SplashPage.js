@@ -36,10 +36,10 @@ export default class SplashPage extends Component {
   componentDidMount() {
     window.scrollTo(0,0);
   }
-  
+
   render() {
     return (
-      <div>
+      <div style={{marginBottom: "40px"}}>
         <div style={splahBox}>
           <div className="container">
             <h1> Website4U helps you to excel in your buisness through enhancing your online presence by creating responsive web applications.</h1>
