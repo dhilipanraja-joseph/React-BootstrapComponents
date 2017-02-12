@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const Whowe={
   background: "url('baytown.jpg') no-repeat center",
   backgroundSize: "cover",
-  height: "90vh",
+  height: "80vh",
   color: "white",
   paddingTop:"10px",
 };
