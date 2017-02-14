@@ -28,19 +28,25 @@ export default class WorkWithUs extends Component {
   }
   render() {
     let { render,close } = this.state;
+    const formBox= {
+      border: "1px solid black",
+      padding: "20px",
+      width: "700px",
+      margin:"auto",
+    };
     return (
-      <div className="text-center container">
+      <div className="container text-center">
         <h3>
-          <span onClick={this._onClick.bind(this,<AskUs/>)}>
+          <span onClick={this._onClick.bind(this,(<div style={formBox}><AskUs/></div>))}>
             Ask Us to build a WebApp
           </span>
            (or)
-          <span onClick={this._onClick.bind(this,<Contribute/>)}>
+          <span onClick={this._onClick.bind(this,(<div style={formBox}><Contribute/></div>))}>
             Contribute to our WebApp
           </span>
         </h3>
-         {close}
-         {render}
+        {close}
+        {render}
       </div>
     );
   }
