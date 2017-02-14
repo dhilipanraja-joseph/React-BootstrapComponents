@@ -5,47 +5,58 @@ import Contribute from './Contribute';
 export default class WorkWithUs extends Component {
   constructor() {
     super();
-    this.state = {
-      render: <div/>,
-      close: <div/>
-    };
-    this._close=this._close.bind(this);
+    this.state= { render: <div/> };
+    this._close= this._close.bind(this);
   }
-  _close(){
-    this.setState({
-      render: <div/>,
-      close: <div/>
-    });
+  _close() {
+    this.setState({ render: <div/> });
   }
   _onClick(c) {
-    this.setState({
-      render: c,
-      close: <div onClick={this._close}>Close (X)</div>
-    });
+    this.setState({ render: c });
   }
   componentDidMount() {
     window.scrollTo(0,0);
   }
   render() {
-    let { render,close } = this.state;
+    let { render }= this.state;
     const formBox= {
       border: "1px solid black",
       padding: "20px",
       width: "700px",
       margin:"auto",
     };
+    const Close= (
+      <div onClick={this._close}>
+        Close (X)
+      </div>
+    );
+    const form1= (
+      <div style={formBox}>
+        <span className="text-right">
+          {Close}
+        </span>
+        <AskUs/>
+      </div>
+    );
+    const form2= (
+      <div style={formBox}>
+        <span className="text-right">
+          {Close}
+        </span>
+        <Contribute/>
+      </div>
+    );
     return (
-      <div className="container text-center">
-        <h3>
-          <span onClick={this._onClick.bind(this,(<div style={formBox}><AskUs/></div>))}>
+      <div className="container">
+        <h3 className="text-center">
+          <span onClick={this._onClick.bind(this,form1)}>
             Ask Us to build a WebApp
           </span>
            (or)
-          <span onClick={this._onClick.bind(this,(<div style={formBox}><Contribute/></div>))}>
+          <span onClick={this._onClick.bind(this,form2)}>
             Contribute to our WebApp
           </span>
         </h3>
-        {close}
         {render}
       </div>
     );

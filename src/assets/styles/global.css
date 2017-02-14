@@ -30,3 +30,16 @@ body {
 .navResize {
   transition: border 0.7s,padding 0.5s, background-color 0.7s;
 }
+
+.formBox {
+  margin: auto;
+  width: 700px;
+  transform: width 0.5s;
+}
+
+@media (max-width: 710px) {
+  .formBox {
+    width: 100%;
+    transition: width 0.5s;
+  }
+}

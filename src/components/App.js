@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const container = {
   fontSize: "17px",
-  marginTop: "100px",
+  marginTop: "110px",
 };
 
 export default class App extends Component {
