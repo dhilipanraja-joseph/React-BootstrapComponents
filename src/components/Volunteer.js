@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import { Form, FormGroup, FormControl, Col, Button, Checkbox } from 'react-bootstrap';
 import jq from 'jquery';
 
@@ -28,11 +29,18 @@ export default class Volunteer extends Component {
   formSubmit(e) {
     e.preventDefault();
     let data= this.state;
-    jq.ajax({
-      type: 'POST',
-      url: '/api/sendmail',
-      data
-    });
+    let { name, email, expertise, skills, github }=this.state;
+    if (expertise===""||skills===""||github===""||name===""||email==="") {
+      alert("Please fill the * required fields");
+    } else {
+      jq.ajax({
+        type: 'POST',
+        url: '/api/sendmail',
+        data
+      }).done(()=>{
+        browserHistory.push('/Thankyou');
+      });
+    }
   }
 
   textChange(e) {
@@ -57,7 +65,7 @@ export default class Volunteer extends Component {
               <FormControl type="text" placeholder="Enter Name"
                 data-statekey="name"
                 onChange={this.textChange}
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formEmail">
@@ -68,7 +76,7 @@ export default class Volunteer extends Component {
               <FormControl type="email" placeholder="Email"
                 data-statekey="email"
                 onChange={this.textChange}
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formPhone">
@@ -90,7 +98,7 @@ export default class Volunteer extends Component {
               <FormControl componentClass="textarea" placeholder="Experiences"
                 data-statekey="expertise"
                 onChange={this.textChange}
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formSkills">
@@ -101,7 +109,7 @@ export default class Volunteer extends Component {
               <FormControl componentClass="textarea" placeholder="Technologies Used"
                 data-statekey="skills"
                 onChange={this.textChange}
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formGitHub">
@@ -112,7 +120,7 @@ export default class Volunteer extends Component {
               <FormControl type="text" placeholder="GitHub Profile"
                 data-statekey="github"
                 onChange={this.textChange}
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formPortfolio">
@@ -137,6 +145,7 @@ export default class Volunteer extends Component {
               />
             </Col>
           </FormGroup>
+          <p>* required fields</p>
           <Button type="submit">
             Submit
           </Button>

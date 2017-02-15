@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import { Form, FormGroup, FormControl, Col, Button, Checkbox } from 'react-bootstrap';
 import jq from 'jquery';
 
@@ -18,12 +19,19 @@ export default class ContactUs extends Component {
 
   formSubmit(e) {
     e.preventDefault();
+    let { name, email, description }= this.state;
     let data= this.state;
-    jq.ajax({
-      type: 'POST',
-      url: '/api/sendmail',
-      data
-    });
+    if (name===""||email===""||description===""){
+      alert("Please fill the * required fields");
+    } else {
+      jq.ajax({
+        type: 'POST',
+        url: '/api/sendmail',
+        data
+      }).done(()=>{
+        browserHistory.push('/Thankyou');
+      });
+    }
   }
 
   textChange(e) {
@@ -51,7 +59,7 @@ export default class ContactUs extends Component {
               <FormControl type="text" value={name} placeholder="Enter Name"
                 onChange={this.textChange}
                 data-statekey="name"
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -62,7 +70,7 @@ export default class ContactUs extends Component {
               <FormControl type="email" value={email} placeholder="Email"
                 onChange={this.textChange}
                 data-statekey="email"
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -83,9 +91,10 @@ export default class ContactUs extends Component {
               <FormControl componentClass="textarea" value={description} placeholder="(How can we help you)"
                 onChange={this.textChange}
                 data-statekey="description"
-                required/>
+                required="true" />
             </Col>
           </FormGroup>
+          <p>* required fields</p>
           <Button type="submit">
             Submit
           </Button>

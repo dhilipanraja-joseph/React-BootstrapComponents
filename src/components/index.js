@@ -6,3 +6,4 @@ export { default as WorkWithUs } from './WorkWithUs';
 export { default as SplashPage } from './SplashPage';
 export { default as Volunteer } from './Volunteer';
 export { default as ContactUs } from './ContactUs';
+export { default as Thankyou } from './Thankyou';
