@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, FormControl, Col, Button, Checkbox } from 'react-bootstrap';
+import jq from 'jquery';
 
 export default class ContactUs extends Component {
   constructor() {
     super();
     this.state= {
+      From: "Contact Form",
       name: "",
       email: "",
       phone: "",
@@ -16,7 +18,12 @@ export default class ContactUs extends Component {
 
   formSubmit(e) {
     e.preventDefault();
-    console.log("state:",this.state);
+    let data= this.state;
+    jq.ajax({
+      type: 'POST',
+      url: '/api/sendmail',
+      data
+    });
   }
 
   textChange(e) {

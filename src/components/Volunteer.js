@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, FormControl, Col, Button, Checkbox } from 'react-bootstrap';
+import jq from 'jquery';
 
 export default class Volunteer extends Component {
 
   constructor() {
     super();
     this.state= {
+      From: "Volunteer Form",
       name: "",
       email: "",
       phone: "",
@@ -13,7 +15,7 @@ export default class Volunteer extends Component {
       skills: "",
       github: "",
       portfolio: "",
-      linkenIn: ""
+      linkedIn: ""
     };
     this.textChange=this.textChange.bind(this);
     this.formSubmit=this.formSubmit.bind(this);
@@ -25,7 +27,12 @@ export default class Volunteer extends Component {
 
   formSubmit(e) {
     e.preventDefault();
-    console.log("state:",this.state);
+    let data= this.state;
+    jq.ajax({
+      type: 'POST',
+      url: '/api/sendmail',
+      data
+    });
   }
 
   textChange(e) {
@@ -125,7 +132,7 @@ export default class Volunteer extends Component {
             </Col>
             <Col sm={8}>
               <FormControl type="text" placeholder="LinkedIn Profile"
-                data-statekey="linkenIn"
+                data-statekey="linkedIn"
                 onChange={this.textChange}
               />
             </Col>
