@@ -3,6 +3,10 @@ import { browserHistory } from 'react-router';
 import { Form, FormGroup, FormControl, Col, Button, Checkbox } from 'react-bootstrap';
 import jq from 'jquery';
 
+const redStar= (
+  <span style={{color:"red"}}>*</span>
+);
+
 export default class ContactUs extends Component {
   constructor() {
     super();
@@ -47,13 +51,13 @@ export default class ContactUs extends Component {
   render() {
     let { name, email, phone, description }= this.state;
     return (
-      <div style={{marginBottom:"17.5vh"}} className="container formBox">
+      <div style={{marginBottom:"14vh"}} className="container formBox">
         <h2>Contact Us</h2>
         <hr/>
         <Form horizontal onSubmit={this.formSubmit}>
           <FormGroup controlId="formHorizontalName">
             <Col sm={4}>
-              Full Name *
+              Full Name {redStar}
             </Col>
             <Col sm={8}>
               <FormControl type="text" value={name} placeholder="Enter Name"
@@ -64,7 +68,7 @@ export default class ContactUs extends Component {
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
             <Col sm={4}>
-              Email *
+              Email {redStar}
             </Col>
             <Col sm={8}>
               <FormControl type="email" value={email} placeholder="Email"
@@ -85,7 +89,7 @@ export default class ContactUs extends Component {
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
             <Col sm={4}>
-              Description *
+              Description {redStar}
             </Col>
             <Col sm={8}>
               <FormControl componentClass="textarea" value={description} placeholder="(How can we help you)"
@@ -94,7 +98,7 @@ export default class ContactUs extends Component {
                 required="true" />
             </Col>
           </FormGroup>
-          <p>* required fields</p>
+          <p>{redStar} required fields</p>
           <Button type="submit">
             Submit
           </Button>

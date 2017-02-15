@@ -3,6 +3,10 @@ import { browserHistory } from 'react-router';
 import { Form, FormGroup, FormControl, Col, Button, Checkbox } from 'react-bootstrap';
 import jq from 'jquery';
 
+const redStar= (
+  <span style={{color:"red"}}>*</span>
+);
+
 export default class Volunteer extends Component {
 
   constructor() {
@@ -59,7 +63,7 @@ export default class Volunteer extends Component {
         <Form horizontal onSubmit={this.formSubmit}>
           <FormGroup controlId="formName">
             <Col sm={4}>
-              Full Name *
+              Full Name {redStar}
             </Col>
             <Col sm={8}>
               <FormControl type="text" placeholder="Enter Name"
@@ -70,7 +74,7 @@ export default class Volunteer extends Component {
           </FormGroup>
           <FormGroup controlId="formEmail">
             <Col sm={4}>
-              Email *
+              Email {redStar}
             </Col>
             <Col sm={8}>
               <FormControl type="email" placeholder="Email"
@@ -92,7 +96,7 @@ export default class Volunteer extends Component {
           </FormGroup>
           <FormGroup controlId="formExperience">
             <Col sm={4}>
-              Area of Expertise *
+              Area of Expertise {redStar}
             </Col>
             <Col sm={8}>
               <FormControl componentClass="textarea" placeholder="Experiences"
@@ -103,7 +107,7 @@ export default class Volunteer extends Component {
           </FormGroup>
           <FormGroup controlId="formSkills">
             <Col sm={4}>
-              Skills *
+              Skills {redStar}
             </Col>
             <Col sm={8}>
               <FormControl componentClass="textarea" placeholder="Technologies Used"
@@ -114,7 +118,7 @@ export default class Volunteer extends Component {
           </FormGroup>
           <FormGroup controlId="formGitHub">
             <Col sm={4}>
-              GitHub Profile *
+              GitHub Profile {redStar}
             </Col>
             <Col sm={8}>
               <FormControl type="text" placeholder="GitHub Profile"
@@ -145,7 +149,7 @@ export default class Volunteer extends Component {
               />
             </Col>
           </FormGroup>
-          <p>* required fields</p>
+          <p>{redStar} required fields</p>
           <Button type="submit">
             Submit
           </Button>

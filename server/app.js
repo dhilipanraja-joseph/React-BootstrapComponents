@@ -1,6 +1,6 @@
 // CONSTANTS
 const PORT = process.env.PORT || 3000;
-console.log(process.env);
+
 // PACKAGE REQUIRES
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
