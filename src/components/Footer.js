@@ -15,7 +15,7 @@ export default class Footer extends Component {
         <div className="row">
           <div className="col-sm-6 text-center"> Copyright &#9400;2017. All Rights Reserved. </div>
           {/* <div className="col-sm-4 text-center"> </div> */}
-          <div className="col-sm-6 text-center"> Facebook | Twitter | Instagram</div>
+          <div className="col-sm-6 text-center"> Facebook | Twitter | Instagram | Google+</div>
         </div>
       </div>
     );
