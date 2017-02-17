@@ -1,7 +1,10 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const router = express.Router();
-const { user, pass } = require('../emailinfo.js');
+const pass = process.env.PASS;
+const user = process.env.USER;
+
+// const { user, pass } = require('../emailinfo.js');
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
