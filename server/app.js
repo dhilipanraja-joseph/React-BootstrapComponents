@@ -13,6 +13,7 @@ const path = require('path');
 // APP DECLARATION
 const app = express();
 app.use(express.static(path.join(__dirname,'../build')))
+
 // WEBPACK CONFIG
 // const compiler = webpack(webpackConfig);
 //
