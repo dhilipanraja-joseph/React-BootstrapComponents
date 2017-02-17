@@ -7,28 +7,28 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const webpack = require('webpack');
-const webpackConfig = require('../webpack.config');
+// const webpack = require('webpack');
+// const webpackConfig = require('../webpack.config');
 
 // APP DECLARATION
 const app = express();
-
+app.use(express.static(path.join(__dirname,'../build')))
 // WEBPACK CONFIG
-const compiler = webpack(webpackConfig);
-
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: webpackConfig.output.publicPath
-}));
-
-app.use(require('webpack-hot-middleware')(compiler));
+// const compiler = webpack(webpackConfig);
+//
+// app.use(require('webpack-dev-middleware')(compiler, {
+//   noInfo: true,
+//   publicPath: webpackConfig.output.publicPath
+// }));
+//
+// app.use(require('webpack-hot-middleware')(compiler));
 
 // GENERAL MIDDLEWARE
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 // ROUTES
 app.use('/api', require('./routes/api'));

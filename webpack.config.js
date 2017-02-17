@@ -2,10 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  debug: true,
-  devtool: 'cheap-module-eval-source-map',
+  // debug: true,
+  // devtool: 'cheap-module-eval-source-map',
   entry: [
-    'webpack-hot-middleware/client?reload=true',
+    // 'webpack-hot-middleware/client?reload=true',
     'bootstrap-loader',
     './src/index'
   ],
@@ -15,13 +15,13 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  devServer: {
-    contentBase: './src'
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
+  // devServer: {
+  //   contentBase: './src'
+  // },
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin(),
+  //   new webpack.NoErrorsPlugin()
+  // ],
   module: {
     loaders: [
       {

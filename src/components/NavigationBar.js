@@ -36,7 +36,7 @@ export default class NavigationBar extends Component {
         <Navbar id="navBar" fixedTop collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link style={headerStyle} to="/">Website4U</Link>
+              <Link style={headerStyle} to="/">VedasWebSolutions</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
