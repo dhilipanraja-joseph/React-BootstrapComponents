@@ -59361,7 +59361,7 @@
 	            " ",
 	            _react2.default.createElement(
 	              "a",
-	              { href: "https://www.facebook.com/VedaWebSolutions/", target: "_blank" },
+	              { href: "https://www.facebook.com/VedasWebSolutions/", target: "_blank" },
 	              "Facebook"
 	            ),
 	            " | ",
@@ -60968,7 +60968,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'PTSans';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(535) + ");\n}\n\n@font-face {\n  font-family: 'BreeSerif';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(536) + ");\n}\n\nbody {\n  font-family: 'PTSans';\n}\n\n.navSize {\n  padding: 30px 0 30px 0;\n  transition: border 0.7s,padding 0.5s, background-color 0.7s;\n}\n\n#navBar {\n  border-radius: 0;\n  font-family: 'BreeSerif';\n  border-bottom: 3px solid #3BABE4;\n}\n\n.navResize {\n  transition: border 0.7s,padding 0.5s, background-color 0.7s;\n}\n\n.formBox {\n  margin: auto;\n  width: 700px;\n  transform: width 0.5s;\n}\n\n@media (max-width: 710px) {\n  .formBox {\n    width: 100%;\n    transition: width 0.5s;\n  }\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'PTSans';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(535) + ");\n}\n\n@font-face {\n  font-family: 'BreeSerif';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(536) + ");\n}\n\nbody {\n  font-family: 'PTSans';\n}\n\n.navSize {\n  padding: 30px 0 30px 0;\n  transition: padding 0.5s;\n  -webkit-transition: padding 0.5s;\n  -moz-transition: padding 0.5s;\n  -o-transition: padding 0.5s;\n}\n\n#navBar {\n  border-radius: 0;\n  font-family: 'BreeSerif';\n  border-bottom: 3px solid #3BABE4;\n}\n\n.navResize {\n  padding: 0px;\n  transition: padding 0.5s;\n  -webkit-transition: padding 0.5s;\n  -moz-transition: padding 0.5s;\n  -o-transition: padding 0.5s;\n}\n\n.formBox {\n  margin: auto;\n  width: 700px;\n  transition: width 0.5s;\n  -webkit-transition: width 0.5s;\n  -moz-transition: width 0.5s;\n  -o-transition: width 0.5s;\n}\n\n@media (max-width: 710px) {\n  .formBox {\n    width: 100%;\n    transition: width 0.5s;\n    -webkit-transition: width 0.5s;\n    -moz-transition: width 0.5s;\n    -o-transition: width 0.5s;\n  }\n}\n", ""]);
 
 	// exports
 
