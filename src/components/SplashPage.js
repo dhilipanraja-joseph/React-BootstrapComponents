@@ -78,7 +78,7 @@ export default class SplashPage extends Component {
       <div style={{marginBottom: "40px"}}>
         <div style={splahBox}>
           <div className="container">
-            <h1> VedasWebSolutions helps you to excel in your buisness through enhancing your online presence by creating responsive web applications.</h1>
+            <h1> VedasWebSolutions helps you to excel in your business through enhancing your online presence by creating responsive web applications.</h1>
           </div>
         </div>
         <div className="container">

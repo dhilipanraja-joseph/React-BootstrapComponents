@@ -60142,7 +60142,7 @@
 	            _react2.default.createElement(
 	              'h1',
 	              null,
-	              ' VedasWebSolutions helps you to excel in your buisness through enhancing your online presence by creating responsive web applications.'
+	              ' VedasWebSolutions helps you to excel in your business through enhancing your online presence by creating responsive web applications.'
 	            )
 	          )
 	        ),
