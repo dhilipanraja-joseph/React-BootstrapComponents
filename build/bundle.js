@@ -59358,10 +59358,9 @@
 	          _react2.default.createElement(
 	            "div",
 	            { className: "col-sm-6 text-center" },
-	            " ",
 	            _react2.default.createElement(
 	              "a",
-	              { href: "https://www.facebook.com/VedasWebSolutions/", target: "_blank" },
+	              { href: "https://www.facebook.com/VedaWebSolutions/", target: "_blank" },
 	              "Facebook"
 	            ),
 	            " | ",
