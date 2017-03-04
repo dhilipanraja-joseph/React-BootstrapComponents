@@ -59634,7 +59634,7 @@
 	          _react2.default.createElement(
 	            "p",
 	            null,
-	            "VedasWebSolutions is commited to empowering your buisness presence online and to grow your market.We focus on producing the quality web responsive websites. We are a group of developers who are striven to work hard with thirst of learning new technologies, Graduate's in Bachelors degree with majors in Computer Science and Engineering. Looking forward to create websites for you to enhance your buisness online presence."
+	            "VedasWebSolutions is commited to empowering your business presence online and to grow your market.We focus on producing the quality web responsive websites. We are a group of developers who are striven to work hard with thirst of learning new technologies, Graduate's in Bachelors degree with majors in Computer Science and Engineering. Looking forward to create websites for you to enhance your buisness online presence."
 	          ),
 	          _react2.default.createElement(
 	            "p",
