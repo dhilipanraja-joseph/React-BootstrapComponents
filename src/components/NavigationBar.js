@@ -4,7 +4,7 @@ import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import jq from 'jquery';
 
 const headerStyle = {
-  fontSize: "30px",
+  fontSize: "20px",
 };
 
 const itemStyle = {
@@ -34,9 +34,12 @@ export default class NavigationBar extends Component {
     return (
       <div>
         <Navbar id="navBar" fixedTop collapseOnSelect>
-          <Navbar.Header>
+          <Navbar.Header className="navHead">
+            <img className="navbar-left" id="logo" src="vws.png"/>
             <Navbar.Brand>
-              <Link style={headerStyle} to="/">VedasWebSolutions</Link>
+              <Link style={headerStyle} to="/">
+                  VedasWebSolutions
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
