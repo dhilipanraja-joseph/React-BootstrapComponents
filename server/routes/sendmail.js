@@ -13,27 +13,27 @@ let transporter = nodemailer.createTransport({
 
 router.route('/portfolio')
   .post((req,res)=> {
-    res.send("hello")
-    // let c= [], { name, email, message }= req.body;
-    // for (let key in req.body) {
-    //   c.push(key+": "+ req.body[key]);
-    // }
-    // let html= c.map(e=>{
-    //   return `<p>${e}</p>`
-    // }).join("");
-    //
-    // let mailOptions= {
-    //     from: ' "info.dhilipanraja.com" ',
-    //     to: 'dlipnraj@gmail.com',
-    //     subject: 'Form Message <DhilipanrajaJoseph>',
-    //     text: `Message From ${name}
-    //            Email: ${email}`,
-    //     html
-    // };
-    //
-    // transporter.sendMail(mailOptions, (err, info) => {
-    //     res.status(err ? 400 : 200).send(err || 'Message %s sent: %s '+info.messageId+" "+info.response);
-    // });
+    // res.send("hello")
+    let c= [], { name, email, message }= req.body;
+    for (let key in req.body) {
+      c.push(key+": "+ req.body[key]);
+    }
+    let html= c.map(e=>{
+      return `<p>${e}</p>`
+    }).join("");
+
+    let mailOptions= {
+        from: ' "info.dhilipanraja.com" ',
+        to: 'dlipnraj@gmail.com',
+        subject: 'Form Message <DhilipanrajaJoseph>',
+        text: `Message From ${name}
+               Email: ${email}`,
+        html
+    };
+
+    transporter.sendMail(mailOptions, (err, info) => {
+        res.status(err ? 400 : 200).send(err || 'Message %s sent: %s '+info.messageId+" "+info.response);
+    });
   });
 
 router.route('/')
