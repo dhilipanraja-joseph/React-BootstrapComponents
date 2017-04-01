@@ -36,8 +36,8 @@ export default class NavigationBar extends Component {
         <Navbar id="navBar" fixedTop collapseOnSelect>
           <Navbar.Header className="navHead">
             <img className="navbar-left" id="logo" src="vws.png"/>
-            <Navbar.Brand>
-              <Link style={headerStyle} to="/">
+            <Navbar.Brand className="brandName">
+              <Link to="/">
                   VedasWebSolutions
               </Link>
             </Navbar.Brand>

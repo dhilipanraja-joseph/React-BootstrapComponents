@@ -40528,10 +40528,10 @@
 	            _react2.default.createElement('img', { className: 'navbar-left', id: 'logo', src: 'vws.png' }),
 	            _react2.default.createElement(
 	              _reactBootstrap.Navbar.Brand,
-	              null,
+	              { className: 'brandName' },
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { style: headerStyle, to: '/' },
+	                { to: '/' },
 	                'VedasWebSolutions'
 	              )
 	            ),
@@ -60968,7 +60968,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'PTSans';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(535) + ");\n}\n\n@font-face {\n  font-family: 'BreeSerif';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(536) + ");\n}\n\nbody {\n  font-family: 'PTSans';\n}\n\n.navHead {\n  padding-top: 0px;\n}\n\n#logo {\n  width: 55px;\n  margin-top: -4px;\n  margin-right: 4px;\n  display: inline;\n}\n\n.navSize {\n  padding: 30px 0 30px 0;\n  transition: padding 0.5s;\n  -webkit-transition: padding 0.5s;\n  -moz-transition: padding 0.5s;\n  -o-transition: padding 0.5s;\n}\n\n#navBar {\n  border-radius: 0;\n  font-family: 'BreeSerif';\n  border-bottom: 3px solid #3BABE4;\n}\n\n.navResize {\n  padding: 0px;\n  transition: padding 0.5s;\n  -webkit-transition: padding 0.5s;\n  -moz-transition: padding 0.5s;\n  -o-transition: padding 0.5s;\n}\n\n.formBox {\n  margin: auto;\n  width: 700px;\n  transition: width 0.5s;\n  -webkit-transition: width 0.5s;\n  -moz-transition: width 0.5s;\n  -o-transition: width 0.5s;\n}\n\n@media (max-width: 710px) {\n  .formBox {\n    width: 100%;\n    transition: width 0.5s;\n    -webkit-transition: width 0.5s;\n    -moz-transition: width 0.5s;\n    -o-transition: width 0.5s;\n  }\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'PTSans';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(535) + ");\n}\n\n@font-face {\n  font-family: 'BreeSerif';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(536) + ");\n}\n\nbody {\n  font-family: 'PTSans';\n}\n\n.navHead {\n  padding-top: 0px;\n}\n\n.brandHead {\n  font-size: 20px;\n}\n\n#logo {\n  width: 55px;\n  margin-top: -4px;\n  margin-right: 4px;\n  display: inline;\n}\n\n.navSize {\n  padding: 30px 0 30px 0;\n  transition: padding 0.5s;\n  -webkit-transition: padding 0.5s;\n  -moz-transition: padding 0.5s;\n  -o-transition: padding 0.5s;\n}\n\n#navBar {\n  border-radius: 0;\n  font-family: 'BreeSerif';\n  border-bottom: 3px solid #3BABE4;\n}\n\n.navResize {\n  padding: 0px;\n  transition: padding 0.5s;\n  -webkit-transition: padding 0.5s;\n  -moz-transition: padding 0.5s;\n  -o-transition: padding 0.5s;\n}\n\n.formBox {\n  margin: auto;\n  width: 700px;\n  transition: width 0.5s;\n  -webkit-transition: width 0.5s;\n  -moz-transition: width 0.5s;\n  -o-transition: width 0.5s;\n}\n\n@media (max-width: 710px) {\n  .brandHead {\n    visibility: hidden;\n  }\n  .formBox {\n    width: 100%;\n    transition: width 0.5s;\n    -webkit-transition: width 0.5s;\n    -moz-transition: width 0.5s;\n    -o-transition: width 0.5s;\n  }\n}\n", ""]);
 
 	// exports
 
