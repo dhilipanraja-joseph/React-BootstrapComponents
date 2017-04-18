@@ -64,9 +64,9 @@ export default class WhatWeDo extends Component {
                 </h1>
               </div>
             </div>
-            <div style={{marginTop: "60px"}}>
+            {/* <div style={{marginTop: "60px"}}>
               <img style={imgBorder} src="ezgif.com-optimize.gif" className="img-responsive"></img>
-            </div>
+            </div> */}
           </div>
           <div className="container">
             <h1>Social Media Marketing</h1>

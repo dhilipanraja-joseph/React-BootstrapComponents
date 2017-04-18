@@ -59507,11 +59507,6 @@
 	                  "Build Website"
 	                )
 	              )
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { style: { marginTop: "60px" } },
-	              _react2.default.createElement("img", { style: imgBorder, src: "ezgif.com-optimize.gif", className: "img-responsive" })
 	            )
 	          ),
 	          _react2.default.createElement(
